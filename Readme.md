@@ -99,3 +99,154 @@ By providing a structured approach to application development, Angular ensures c
 15. Modular Structure
 Angular applications are organized into modules, which can be eagerly or lazily loaded. This modular approach improves code management, reuse, and separation of concerns.
 </details>
+
+<details>
+  <p>
+     What is a Component in Angular and it's types?
+  </p>
+  In Angular, a component is a fundamental building block of the application. It encapsulates a piece of the user interface (UI) and its related behavior, allowing for modular and reusable code. Each component in Angular consists of three main parts:
+
+1. Template: Defines the HTML view of the component.
+2. Class: Contains the business logic and data of the component.
+3. Styles: Defines the CSS styling specific to the component.
+
+Types of Components in Angular.
+While all Angular components follow the same basic structure, they can be categorized based on their purpose and usage within the application:
+
+1.  Root Component
+2.  Feature Components
+3.  Shared Components
+4.  Presentation Components
+5.  Container Components
+6.  Dynamic Components
+
+Let's explore each type in detail:
+
+1.  Root Component
+    The root component is the top-level component of an Angular application. It is specified in the bootstrap array of the NgModule decorator in the AppModule (usually app.component.ts).
+    <picture>
+    import { Component } from '@angular/core';
+    @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+    title = 'My Angular App';
+    }
+    </picture>
+
+2.  Feature Components
+    Feature components represent a distinct feature or section of the application. They are usually grouped together in a module dedicated to that feature.
+    <picture>
+    import { Component } from '@angular/core';
+    @Component({
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.css']
+    })
+    export class DashboardComponent {
+    // Logic for dashboard
+    }
+
+            </picture>
+
+    3. Shared Components
+
+       Shared components are reusable components that can be used across multiple feature modules or components. They are typically declared in a shared module.
+
+       <picture>
+        import { Component, Input } from '@angular/core';
+       @Component({
+       selector: 'app-button',
+       template: `<button>{{label}}</button>`,
+       styleUrls: ['./button.component.css']
+       })
+       export class ButtonComponent {
+       @Input() label: string;
+       }
+
+       </picture>
+
+    4. Presentation Components
+
+    Presentation components (or dumb components) are focused on how things look. They receive data and callbacks via inputs and outputs and do not contain business logic.
+    <picture>
+    import { Component, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({
+selector: 'app-user-profile',
+templateUrl: './user-profile.component.html',
+styleUrls: ['./user-profile.component.css']
+})
+export class UserProfileComponent {
+@Input() user: any;
+@Output() updateUser = new EventEmitter<any>();
+
+onSave() {
+this.updateUser.emit(this.user);
+}
+}
+
+ </picture>
+ 
+ 5. Container Components
+Container components (or smart components) are responsible for fetching data and managing state. They pass data to presentation components and handle user interactions.
+
+   <picture>
+   import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
+
+@Component({
+selector: 'app-user-container',
+template: `<app-user-profile [user]="user" (updateUser)="updateUser($event)"></app-user-profile>`,
+})
+export class UserContainerComponent implements OnInit {
+user: any;
+
+constructor(private userService: UserService) {}
+
+ngOnInit() {
+this.userService.getUser().subscribe(user => this.user = user);
+}
+
+updateUser(user: any) {
+this.userService.updateUser(user).subscribe();
+}
+}
+
+ </picture>
+
+6.  Dynamic Components
+    Dynamic components are components that are created and inserted into the DOM at runtime. They are useful for cases where components need to be loaded based on user interaction or configuration.
+    <picture>
+    import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+
+@Component({
+selector: 'app-dynamic-loader',
+template: `<ng-template #container></ng-template>`
+})
+export class DynamicLoaderComponent {
+@ViewChild('container', { read: ViewContainerRef, static: true }) container: ViewContainerRef;
+
+constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
+
+loadComponent(component: any) {
+const factory = this.componentFactoryResolver.resolveComponentFactory(component);
+this.container.clear();
+this.container.createComponent(factory);
+}
+}
+
+    </picture>
+    </details>
+
+<details>
+  <p>
+  </p>
+</details>
+
+<details>
+  <p>
+  </p>
+</details>
