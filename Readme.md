@@ -5,35 +5,44 @@
 
 <details>
   <summary>Why Angular is considered a platform rather than just a framework?</summary>
-  <p>Angular is considered a platform because it provides a comprehensive suite of tools, libraries, and functionalities that cover every aspect of the application development lifecycle. This integrated approach simplifies the development process and allows developers to focus on building robust, scalable, and maintainable applications.
-  1.Comprehensive Ecosystem
-Angular is more than just a framework for building single-page applications (SPAs). It provides a complete ecosystem that includes everything needed for development, from development tools to testing utilities, and beyond. This comprehensive approach makes it a platform. Key components include:
+  <p>Angular is considered a platform because it provides a comprehensive suite of tools, libraries, and functionalities that cover every aspect of the application development lifecycle. This integrated approach simplifies the development process and allows developers to focus on building robust, scalable, and maintainable applications.</br>
+
+1. Comprehensive Ecosystem
+   Angular is more than just a framework for building single-page applications (SPAs). It provides a complete ecosystem that includes everything needed for development, from development tools to testing utilities, and beyond. This comprehensive approach makes it a platform. Key components include:
 
 Angular CLI: A powerful command-line interface that helps with project creation, building, deployment, and more.
 RxJS: A library for reactive programming using observables, making it easier to manage asynchronous data streams.
 NgRx: A state management library inspired by Redux, used for managing application state in a reactive way.
-Angular Material: A UI component library that follows Material Design principles, providing pre-built UI components. 2. Built-In Tools and Libraries
-Angular includes a suite of built-in tools and libraries that cover a wide range of functionalities, reducing the need for third-party integrations. Examples include:
+Angular Material: A UI component library that follows Material Design principles, providing pre-built UI components.
+
+2.  Built-In Tools and Libraries
+    Angular includes a suite of built-in tools and libraries that cover a wide range of functionalities, reducing the need for third-party integrations. Examples include:
 
 Routing: Angular provides a powerful router to manage navigation and URL paths.
 Forms: Comprehensive support for template-driven and reactive forms, along with validation.
-HTTP Client: An HTTP client module for making HTTP requests to back-end services. 3. Development Workflow
-Angular supports the entire development workflow from setup to production. This includes:
+HTTP Client: An HTTP client module for making HTTP requests to back-end services.
+
+3.  Development Workflow
+    Angular supports the entire development workflow from setup to production. This includes:
 
 Project Setup: Using Angular CLI to scaffold new projects with best practices.
 Development: Tools like Hot Module Replacement (HMR) and live reloading enhance the development experience.
 Testing: Integrated support for unit tests and end-to-end (E2E) tests using Jasmine, Karma, and Protractor.
 Build and Optimization: Angular CLI handles the build process, including optimizations like Ahead-of-Time (AOT) compilation, tree-shaking, and bundling.
-Deployment: Tools for easy deployment to various environments. 4. Modularity and Scalability
-Angular is designed with modularity and scalability in mind. Features like lazy loading, dependency injection, and modular architecture make it easier to build large-scale applications that can be maintained and extended over time.
+Deployment: Tools for easy deployment to various environments.
+
+4. Modularity and Scalability
+   Angular is designed with modularity and scalability in mind. Features like lazy loading, dependency injection, and modular architecture make it easier to build large-scale applications that can be maintained and extended over time.
 
 5. Cross-Platform Development
    Angular supports cross-platform development. While primarily used for web applications, Angular also has support for mobile and desktop applications through integrations like:
 
 Angular Universal: For server-side rendering and improving performance and SEO.
 Ionic: A framework for building mobile applications using Angular.
-Electron: For building desktop applications. 6. Strong Community and Ecosystem
-Angular is backed by Google and has a strong community of developers, extensive documentation, and a rich ecosystem of third-party libraries and tools. This support enhances its capability to serve as a full-fledged platform.
+Electron: For building desktop applications.
+
+6. Strong Community and Ecosystem
+   Angular is backed by Google and has a strong community of developers, extensive documentation, and a rich ecosystem of third-party libraries and tools. This support enhances its capability to serve as a full-fledged platform.
 
 7. Consistency and Maintainability
 By providing a structured approach to application development, Angular ensures consistency across different projects and teams. The use of TypeScript, strict typing, and Angular-specific coding guidelines contribute to maintainable and scalable codebases.
@@ -44,8 +53,9 @@ By providing a structured approach to application development, Angular ensures c
 <summary>What are the key features of Angular?</summary>
 <p>Key features include two-way data binding, MVC architecture, dependency injection, directives, and a comprehensive routing system.</p>
 <p>Angular, developed and maintained by Google, is a robust platform for building web applications. It offers a comprehensive set of features that support the development, testing, and deployment of complex applications. Here are some of the key features of Angular:</p>
+
 1. Component-Based Architecture
-Angular's architecture revolves around components, which are the building blocks of the application. Each component encapsulates its own logic, template, and styles, promoting modularity and reusability.
+   Angular's architecture revolves around components, which are the building blocks of the application. Each component encapsulates its own logic, template, and styles, promoting modularity and reusability.
 
 2. TypeScript Support
    Angular is built with TypeScript, a superset of JavaScript that includes type definitions. TypeScript helps catch errors at compile-time, provides better tooling with autocompletion and refactoring, and improves code maintainability.
