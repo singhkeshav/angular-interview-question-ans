@@ -124,7 +124,7 @@ Let's explore each type in detail:
 
 1.  Root Component
     The root component is the top-level component of an Angular application. It is specified in the bootstrap array of the NgModule decorator in the AppModule (usually app.component.ts).
-    <picture>
+
     import { Component } from '@angular/core';
     @Component({
     selector: 'app-root',
@@ -134,11 +134,9 @@ Let's explore each type in detail:
     export class AppComponent {
     title = 'My Angular App';
     }
-    </picture>
 
 2.  Feature Components
     Feature components represent a distinct feature or section of the application. They are usually grouped together in a module dedicated to that feature.
-    <picture>
     import { Component } from '@angular/core';
     @Component({
     selector: 'app-dashboard',
@@ -149,14 +147,11 @@ Let's explore each type in detail:
     // Logic for dashboard
     }
 
-            </picture>
-
     3. Shared Components
 
        Shared components are reusable components that can be used across multiple feature modules or components. They are typically declared in a shared module.
 
-       <picture>
-        import { Component, Input } from '@angular/core';
+       import { Component, Input } from '@angular/core';
        @Component({
        selector: 'app-button',
        template: `<button>{{label}}</button>`,
@@ -166,12 +161,9 @@ Let's explore each type in detail:
        @Input() label: string;
        }
 
-       </picture>
-
     4. Presentation Components
 
     Presentation components (or dumb components) are focused on how things look. They receive data and callbacks via inputs and outputs and do not contain business logic.
-    <picture>
     import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -188,13 +180,10 @@ this.updateUser.emit(this.user);
 }
 }
 
- </picture>
- 
- 5. Container Components
-Container components (or smart components) are responsible for fetching data and managing state. They pass data to presentation components and handle user interactions.
+5.  Container Components
+    Container components (or smart components) are responsible for fetching data and managing state. They pass data to presentation components and handle user interactions.
 
-   <picture>
-   import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 
 @Component({
@@ -215,12 +204,10 @@ this.userService.updateUser(user).subscribe();
 }
 }
 
- </picture>
-
 6.  Dynamic Components
     Dynamic components are components that are created and inserted into the DOM at runtime. They are useful for cases where components need to be loaded based on user interaction or configuration.
-    <picture>
-    import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+
+import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
 selector: 'app-dynamic-loader',
@@ -238,15 +225,4 @@ this.container.createComponent(factory);
 }
 }
 
-    </picture>
-    </details>
-
-<details>
-  <p>
-  </p>
-</details>
-
-<details>
-  <p>
-  </p>
-</details>
+   </details>
